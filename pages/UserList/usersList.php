@@ -33,7 +33,7 @@ $conn->close();
     />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Road+Rage&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/animations.css">
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Google_Forms_2020_Logo.svg/800px-Google_Forms_2020_Logo.svg.png" type="image/x-icon">
@@ -68,19 +68,16 @@ $conn->close();
     </style>
   </head>
 
-  <fo class="hold-transition sidebar-mini">
+  <body class="hold-transition sidebar-mini">
     <div class="wrapper">
       <div class="content-wrapper">
 
         <section class="content-header bg-dark fadeInDown">
           <div class="container-fluid py-2 px-5 d-flex justify-content-between align-items-center">
             <div class="row text-center text-light">
-                <h1 style="font-family: 'Road Rage'; font-size: 2.75rem;" class="popIn">CRUD Showcase</h1>
+                <h1 style="font-family: 'Geologica'; font-size: 2.75rem;" class="popIn">Cadastro de clientes:</h1>
             </div>
-            <ul class="d-flex gap-4 list-unstyled mb-0">
-              <li><a href="https://www.linkedin.com/in/eduardorechemartins/" target="_blank" class ="text-secondary display-6 brands-link"><i class="fa-brands fa-linkedin"></i></a></li>
-              <li><a href="https://github.com/RecheEduardo?tab=repositories" target="_blank" class ="text-secondary display-6 brands-link"><i class="fa-brands fa-github"></i></a></li>
-            </ul>
+            <button class="btn btn-lg bg-danger bg-gradient text-light"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>
           </div>
         </section>
 
@@ -141,5 +138,5 @@ $conn->close();
       <a href="../../" class="btn btn-sm btn-success">
         <i class="fa-solid fa-plus"></i> Adicionar cliente  
       </a>
-  </fo>
+  </div>
 </html>

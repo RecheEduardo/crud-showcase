@@ -56,7 +56,7 @@ $conn->close();
                         <div class="row justify-content-center">
                             <div class="col-xl-5 col-md-8">
                                 <form class="bg-white rounded shadow-5-strong p-5" action="edit.php?id=<?= $pessoa['id']?>" method="POST">
-                                    <h1 class="text-center pb-3">Editar cliente</h1>
+                                    <h1 class="text-center pb-3"><b>Editar cliente</b></h1>
                                     <hr />
                                     <div class="form-outline mb-4" data-mdb-input-init>
                                         <label class="form-label" for="pessoa[nome]">Nome</label>
