@@ -39,9 +39,9 @@ CREATE TABLE `pessoa` (
 --
 
 INSERT INTO `pessoa` (`id`, `nome`, `idade`, `email`) VALUES
-(377, 'Neide Reche Martins', 58, 'Neidereche@hotmail.com'),
+(377, 'Neide', 58, 'Neide@hotmail.com'),
 (378, 'João', 15, 'Juao@gmail.com'),
-(379, 'Leonardo Reche', 98, 'Leo@hotmail.com');
+(379, 'Leonardo', 98, 'Leo@hotmail.com');
 
 --
 -- Índices para tabelas despejadas
