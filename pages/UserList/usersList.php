@@ -118,12 +118,7 @@ $conn->close();
                           </div>
                           <div class="card-footer d-flex justify-content-end">
                             <div class="text-right">
-                              <a href="../EditUser/editUser.php?id=<?= $pessoa['id'] ?>" class="btn btn-sm btn-primary">
-                                <i class="fa-solid fa-pencil"></i> Editar  
-                              </a>
-                              <a href="../DeleteUser/deleteUser.php?id=<?= $pessoa['id'] ?>" class="btn btn-sm btn-danger">
-                                <i class="fa-solid fa-trash"></i> Excluir  
-                              </a>
+                              <button class="btn-primary">ABCD</button>
                             </div>
                           </div>
                         </div>
