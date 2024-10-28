@@ -122,10 +122,10 @@ $conn->close();
                           </div>
                           <div class="card-footer d-flex justify-content-end">
                             <div class="text-right">
-                              <a href="../EditUser/editUser.php?id=<?= $pessoa['id'] ?>" class="btn btn-sm btn-primary">
+                              <a href="../EditCostumer/editCostumer.php?id=<?= $pessoa['id'] ?>" class="btn btn-sm btn-primary">
                                 <i class="fa-solid fa-pencil"></i> Editar  
                               </a>
-                              <a href="../DeleteUser/deleteUser.php?id=<?= $pessoa['id'] ?>" class="btn btn-sm btn-danger">
+                              <a href="../DeleteCostumer/deleteCostumer.php?id=<?= $pessoa['id'] ?>" class="btn btn-sm btn-danger">
                                 <i class="fa-solid fa-trash"></i> Excluir  
                               </a>
                             </div>
@@ -142,7 +142,7 @@ $conn->close();
       </div>
     </div>
     <div class = "Add-btn popIn">
-      <a href="../../" class="btn btn-sm btn-success">
+      <a href="../CreateCostumer/createCostumer.php" class="btn btn-sm btn-success">
         <i class="fa-solid fa-plus"></i> Adicionar cliente  
       </a>
   </div>

@@ -1,65 +1,101 @@
+<?php
+  include('./pages/Login/db_conection.php');
+
+  if(isset($_POST['email']) || isset($_POST['senha'])){
+
+    if(strlen($_POST['email']) == 0){
+      echo "Preencha seu e-mail";
+    }else if(strlen($_POST['senha']) == 0){
+      echo "Preencha sua senha";
+    }
+    
+    $email = $connection->real_escape_string($_POST['email']);
+    $senha = $connection->real_escape_string($_POST['senha']);
+
+    $sql_code = "SELECT * FROM `usuarios` WHERE `email` = '$email' and `senha` = '$senha';";
+    $sql_query = $connection->query($sql_code) or die('Conexão SQL mal sucedida! ' . $connection->error);
+
+    $query_quantidade = $sql_query->num_rows;
+
+    if($query_quantidade != 1){
+      echo "<script>alert('Falha no login! E-mail ou senha incorretos');</script>";
+    }
+    else{
+      $usuario = $sql_query->fetch_assoc();
+
+      if(!isset($_SESSION)){
+        session_start();
+      }
+
+      $_SESSION['id'] = $usuario['id'];
+      $_SESSION['nome'] = $usuario['nome'];
+
+      $connection->close();
+
+      header('Location: ./Pages/CostumersList/costumersList.php');
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar cliente</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fazer Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="pages/css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./pages/css/animations.css">
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Google_Forms_2020_Logo.svg/800px-Google_Forms_2020_Logo.svg.png" type="image/x-icon">
-</head>
-<body>
-    <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
-        <header>
-            <style>
-                #intro {
-                    background-image: url(https://images.unsplash.com/photo-1613830224931-4f40c7f580e0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-attachment: fixed;
-                    background-position: center;
-                    height: 100svh;
-                }
-            </style>
-            <div id="intro" class="bg-image shadow-2-strong ">
-                <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.6)">
-                    <div class="container popUp">
-                        <div class="row justify-content-center">
-                            <div class="col-xl-5 col-md-8">
+    <style>
+      body{
+        font-family: 'Sora' !important;
+      }
+      .content{
+        min-height: 92svh;
+      }
+      .content-header{
+        min-height: 8svh;
+      }
+    </style>
+  </head>
 
-                                <form class="bg-white rounded shadow-5-strong p-5" action="..\CRUDshowcase\pages\CreateUser\addToForm.php" method="POST">
-                                    <h1 class="text-center pb-3"><b>Adicione o cliente</b></h1>
-                                    <hr>
-                                    <div class="form-outline mb-4" data-mdb-input-init>
-                                        <label class="form-label" for="pessoa[nome]">Nome</label>
-                                        <input type="text" id="nome" name="pessoa[nome]" class="form-control" placeholder="Digite seu nome..." required/>
-                                    </div>
-
-                                    <div class="form-outline mb-4" data-mdb-input-init>
-                                        <label class="form-label" for="idade">Idade</label>
-                                        <input type="number" id="idade" name="pessoa[idade]" class="form-control" placeholder="Digite sua idade..." required/>
-                                    </div>
-
-                                    <div class="form-outline mb-4" data-mdb-input-init>
-                                        <label class="form-label" for="email">Email</label>
-                                        <input type="email" id="email" name="pessoa[email]" class="form-control" placeholder="Digite seu E-Mail..." required/>
-                                    </div>
-
-                                    <div class="d-flex justify-content-end">
-                                        <button type="submit" class="btn btn-primary btn-block" data-mdb-ripple-init>
-                                            Adicionar
-                                        </button>
-                                    </div>
-                                </form>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <body class="hold-transition sidebar-mini bg-dark">
+    <div class="wrapper fadeInDown">
+      <div class="content-wrapper">
+        <section class="content-header bg-dark">
+          <div class="container-fluid py-2 px-5 d-flex justify-content-between align-items-center">
+            <div class="row text-center text-light">
+                <h1 style="font-family: 'Geologica';" class="fadeInDown mx-3"><i class="fa-solid fa-square-pen"></i> CRUD Showcase</h1>
             </div>
-            <!-- Background image -->
-        </header>
-        <!--Main Navigation-->
+            <form method="POST">
+                <div class="form-group d-flex gap-3 fadeInDown align-items-center">
+                    <label for="email"><i class="fa-solid fa-envelope  text-secondary" style="font-size: 30px;"></i></label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu email..." class="form-control" required>
+                    <label for="email"><i class="fa-solid fa-key text-secondary" style="font-size: 30px;"></i></label>
+                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha..." class="form-control" required>
+                    <input type="submit" value="Entrar" class="btn btn-lg btn-success">
+                </div>
+            </form>
+          </div>
+        </section>
+        <section class="content bg-gradient bg-dark d-flex justify-content-center align-items-center">
+          <div class="container bg-light rounded-3 p-4 py-5 popIn">
+            <h1 class="display-2 text-center"><b>Olá, usuário.</b></h1>
+            <hr>
+            <p class="display-6 my-5 text-secondary text-center">
+              <i class="fa-solid fa-circle-exclamation"></i> 
+              Para ter acesso ao sistema, por favor, realize o login acima com seus dados cadastrais.
+            </p>
+            <p class="text-secondary text-center" style="font-size: 2rem;">
+              Não possui uma conta? 
+              <a href="./pages/signIn/sign_in.php" class="text-primary text-decoration-none">Clique aqui</a>
+              para se cadastrar.</p> 
+          </div>
+        </section>
+      </div>
     </div>
-</body>
 </html>

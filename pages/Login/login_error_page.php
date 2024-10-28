@@ -26,7 +26,7 @@
             <b><i class="fa-solid fa-triangle-exclamation"></i> Erro</b>
         </h1>
         <h1 class="text-light text-center display-3">Você não tem permissão para entrar nessa página...</h1>
-        <button class="btn btn-lg bg-gradient bg-success w-auto"><a href="./login.php" class="text-white text-center text-decoration-none" style="font-size: 3rem;">
+        <button class="btn btn-lg bg-gradient bg-success w-auto"><a href="../.." class="text-white text-center text-decoration-none" style="font-size: 3rem;">
             <i class="fa-solid fa-backward-step"></i> Voltar</a>
         </button>
     </div>

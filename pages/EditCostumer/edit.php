@@ -22,4 +22,4 @@ $sql = "UPDATE `pessoa` SET `nome` = '$nome', `idade` = '$idade', `email` = '$em
 $conn->query($sql);
 
 $conn->close();
-header('Location: ../UserList/usersList.php');
+header('Location: ../CostumersList/costumersList.php');

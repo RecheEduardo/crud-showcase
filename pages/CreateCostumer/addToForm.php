@@ -21,6 +21,6 @@ if ($conn->query($sql) === FALSE) {
     echo "Houve um erro: " . $sql . "<br>" . $conn->error;
 }
 
-header('Location: ../UserList/usersList.php');
+header('Location: ../CostumersList/costumersList.php');
 
 $conn->close();

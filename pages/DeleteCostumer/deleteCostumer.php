@@ -16,6 +16,6 @@ $sql = "DELETE FROM pessoa WHERE id = $id";
 
 $conn->query($sql);
 
-header('Location: ../UserList/usersList.php');
+header('Location: ../CostumersList/costumersList.php');
 
 $conn->close();
