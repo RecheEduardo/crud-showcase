@@ -16,7 +16,7 @@ else{
     $sql_code = "INSERT INTO `usuarios` (`nome`, `email`, `senha`) VALUES ('$nome', '$email', '$senha');";
 
     if($connection->query($sql_code) === true){
-        header('Location: ../Login/login.php');
+        header('Location: ../../');
     }else{
         echo 'Erro ao cadastrar o usuário:' . $connection->error; 
     }

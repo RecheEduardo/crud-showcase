@@ -1,11 +1,6 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "edudatabase";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
+include '../Login/db_conection.php';
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -13,7 +8,7 @@ if ($conn->connect_error) {
 
 $sql = "SELECT * FROM pessoa where id = $id";
 
-$result = $conn->query($sql);
+$result = $connection->query($sql);
 
 if (!$result) {
     die("Erro na consulta: " . $conn->error);
@@ -21,7 +16,7 @@ if (!$result) {
 
 $pessoa = $result->fetch_assoc();
 
-$conn->close();
+$connection->close();
 
 
 

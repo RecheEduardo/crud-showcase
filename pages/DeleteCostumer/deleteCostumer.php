@@ -1,21 +1,13 @@
-<?php 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "edudatabase";
+<?php
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include '../Login/db_conection.php';
 
 $id = $_GET['id'];
 
 $sql = "DELETE FROM pessoa WHERE id = $id";
 
-$conn->query($sql);
+$connection->query($sql);
 
 header('Location: ../CostumersList/costumersList.php');
 
-$conn->close();
+$connection->close();

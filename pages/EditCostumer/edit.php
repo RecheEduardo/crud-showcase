@@ -1,15 +1,6 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "edudatabase";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include '../Login/db_conection.php';
 
 $id = $_GET['id'];
 
@@ -19,7 +10,7 @@ $email = $_POST['pessoa']['email'];
 
 $sql = "UPDATE `pessoa` SET `nome` = '$nome', `idade` = '$idade', `email` = '$email' WHERE `pessoa`.`id` = $id;";
 
-$conn->query($sql);
+$connection->query($sql);
 
-$conn->close();
+$connection->close();
 header('Location: ../CostumersList/costumersList.php');

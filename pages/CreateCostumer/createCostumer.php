@@ -26,8 +26,7 @@
                     <div class="container popUp">
                         <div class="row justify-content-center">
                             <div class="col-xl-5 col-md-8">
-
-                                <form class="bg-white rounded shadow-5-strong p-5" action="..\CRUDshowcase\pages\CreateCostumer\addToForm.php" method="POST">
+                                <form class="bg-white rounded shadow-5-strong p-5" action="./addToForm.php" method="POST">
                                     <h1 class="text-center pb-3"><b>Adicione o cliente</b></h1>
                                     <hr>
                                     <div class="form-outline mb-4" data-mdb-input-init>
@@ -51,7 +50,6 @@
                                         </button>
                                     </div>
                                 </form>
-
                             </div>
                         </div>
                     </div>

@@ -1,16 +1,12 @@
 <?php 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "edudatabase";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+include '../Login/db_conection.php';
 
 $sql = 'SELECT * from pessoa';
-$result = $conn->query($sql);
+$result = $connection->query($sql);
 
-if ($conn->query($sql) === FALSE) {
-  echo "Houve um erro: " . $sql . "<br>" . $conn->error;
+if ($connection->query($sql) === FALSE) {
+  echo "Houve um erro: " . $sql . "<br>" . $connection->error;
 }
 
 if(!isset($_SESSION)){
@@ -23,7 +19,7 @@ while($row = $result->fetch_assoc()){
     $data[] = $row;
 }
 
-$conn->close();
+$connection->close();
 
 ?>
 

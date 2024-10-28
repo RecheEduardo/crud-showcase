@@ -1,5 +1,5 @@
 <?php
-  include('./pages/Login/db_conection.php');
+  include './pages/Login/db_conection.php';
 
   if(isset($_POST['email']) || isset($_POST['senha'])){
 
