@@ -2,8 +2,8 @@
 
 include '../Login/db_conection.php';
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if ($connection->connect_error) {
+    die("Connection failed: " . $connection->connect_error);
 }
 
 $sql = "SELECT * FROM pessoa where id = $id";
@@ -11,7 +11,7 @@ $sql = "SELECT * FROM pessoa where id = $id";
 $result = $connection->query($sql);
 
 if (!$result) {
-    die("Erro na consulta: " . $conn->error);
+    die("Erro na consulta: " . $connection->error);
 }
 
 $pessoa = $result->fetch_assoc();

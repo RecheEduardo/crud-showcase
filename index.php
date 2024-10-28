@@ -32,7 +32,7 @@
 
       $connection->close();
 
-      header('Location: ./Pages/CostumersList/costumersList.php');
+      header('Location: ./pages/CostumersList/costumersList.php');
     }
   }
 ?>

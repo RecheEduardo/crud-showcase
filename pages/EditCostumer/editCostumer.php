@@ -22,7 +22,7 @@ $sql = "SELECT * FROM pessoa where id = $id";
 $result = $connection->query($sql);
 
 if (!$result) {
-    die("Erro na consulta: " . $conn->error);
+    die("Erro na consulta: " . $connection->error);
 }
 
 $pessoa = $result->fetch_assoc();
