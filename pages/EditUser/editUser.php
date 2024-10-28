@@ -44,7 +44,7 @@ $conn->close();
         <header>
             <style>
                 #intro {
-                    background-image: url(https://images.unsplash.com/photo-1630182048152-ed2ea240b6cf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+                    background-image: url(https://images.unsplash.com/photo-1613830224931-4f40c7f580e0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
                     background-size: cover;
                     background-position: center;
                     height: 100svh;

@@ -13,6 +13,12 @@ if ($conn->query($sql) === FALSE) {
   echo "Houve um erro: " . $sql . "<br>" . $conn->error;
 }
 
+if(!isset($_SESSION)){
+  session_start();
+}
+
+include '../Login/user_protection.php';
+
 while($row = $result->fetch_assoc()){
     $data[] = $row;
 }
@@ -77,7 +83,7 @@ $conn->close();
             <div class="row text-center text-light">
                 <h1 style="font-family: 'Geologica'; font-size: 2.75rem;" class="popIn">Cadastro de clientes:</h1>
             </div>
-            <button class="btn btn-lg bg-danger bg-gradient text-light"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>
+            <button class="btn btn-lg bg-danger bg-gradient"><a href="../Login/exit_login.php" class="text-light text-decoration-none"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></button>
           </div>
         </section>
 
@@ -85,6 +91,8 @@ $conn->close();
           <div class="card mb-5 fadeInUp" style="border: none !important">
             <div class="card-body">
               <div class="row">
+                <h1 class="text-secondary text-center">Seja bem vindo de volta, <b><?= $_SESSION['nome'] ?></b></h1>
+                <hr>
                 <?php 
                   if(empty($data)) { ?>
                     <h2 class="text-secondary text-center my-5 opacity-50 popUp">Não há nenhum cliente cadastrado...</h2>

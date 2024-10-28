@@ -1,3 +1,42 @@
+<?php
+  include('db_conection.php');
+
+  if(isset($_POST['email']) || isset($_POST['senha'])){
+
+    if(strlen($_POST['email']) == 0){
+      echo "Preencha seu e-mail";
+    }else if(strlen($_POST['senha']) == 0){
+      echo "Preencha sua senha";
+    }
+    
+    $email = $connection->real_escape_string($_POST['email']);
+    $senha = $connection->real_escape_string($_POST['senha']);
+
+    $sql_code = "SELECT * FROM `usuarios` WHERE `email` = '$email' and `senha` = '$senha';";
+    $sql_query = $connection->query($sql_code) or die('Conexão SQL mal sucedida! ' . $connection->error);
+
+    $query_quantidade = $sql_query->num_rows;
+
+    if($query_quantidade != 1){
+      echo "<script>alert('Falha no login! E-mail ou senha incorretos');</script>";
+    }
+    else{
+      $usuario = $sql_query->fetch_assoc();
+
+      if(!isset($_SESSION)){
+        session_start();
+      }
+
+      $_SESSION['id'] = $usuario['id'];
+      $_SESSION['nome'] = $usuario['nome'];
+
+      $connection->close();
+
+      header('Location: ../UserList/usersList.php');
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -35,12 +74,12 @@
             <div class="row text-center text-light">
                 <h1 style="font-family: 'Geologica';" class="fadeInDown mx-3">Bem vindo!</h1>
             </div>
-            <form >
+            <form method="POST">
                 <div class="form-group d-flex gap-3 fadeInDown align-items-center">
                     <label for="email"><i class="fa-solid fa-envelope  text-secondary" style="font-size: 30px;"></i></label>
-                    <input type="email" name="email" id="email" placeholder="Digite seu email..." class="form-control">
+                    <input type="email" name="email" id="email" placeholder="Digite seu email..." class="form-control" required>
                     <label for="email"><i class="fa-solid fa-key text-secondary" style="font-size: 30px;"></i></label>
-                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha..." class="form-control">
+                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha..." class="form-control" required>
                     <input type="submit" value="Entrar" class="btn btn-lg btn-success">
                 </div>
             </form>
@@ -49,7 +88,15 @@
         <section class="content bg-gradient bg-dark d-flex justify-content-center align-items-center">
           <div class="container bg-light rounded-5 p-4 py-5 popIn">
             <h1 class="display-2 text-center"><b>Olá, usuário.</b></h1>
-            <p class="display-6 my-5 text-secondary text-center"><i class="fa-solid fa-circle-exclamation"></i> Para ter acesso ao sistema, por favor, realize o login acima com seus dados cadastrais.</p>
+            <hr>
+            <p class="display-6 my-5 text-secondary text-center">
+              <i class="fa-solid fa-circle-exclamation"></i> 
+              Para ter acesso ao sistema, por favor, realize o login acima com seus dados cadastrais.
+            </p>
+            <p class="text-secondary text-center" style="font-size: 2rem;">
+              Não possui uma conta? 
+              <a href="../signIn/sign_in.php" class="bg-gradient bg-success rounded-2 text-light p-2 text-decoration-none">Clique aqui</a>
+              para se cadastrar.</p> 
           </div>
         </section>
       </div>
