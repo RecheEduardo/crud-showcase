@@ -33,10 +33,7 @@ $conn->close();
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Clientes</title>
-    <link
-      rel="stylesheet"
-      href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
@@ -81,9 +78,11 @@ $conn->close();
         <section class="content-header bg-dark fadeInDown">
           <div class="container-fluid py-2 px-5 d-flex justify-content-between align-items-center">
             <div class="row text-center text-light">
-                <h1 style="font-family: 'Geologica'; font-size: 2.75rem;" class="popIn">Cadastro de clientes:</h1>
-            </div>
-            <button class="btn btn-lg bg-danger bg-gradient"><a href="../Login/exit_login.php" class="text-light text-decoration-none"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></button>
+                <h1 style="font-family: 'Geologica'; font-size: 2.75rem;" class="popIn"><i class="fa-regular fa-square-plus"></i> Cadastro de clientes:</h1>
+            </div>  
+            <a href="../Login/exit_login.php" class="text-decoration-none">
+              <button class="btn btn-lg bg-danger bg-gradient text-light"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>
+            </a>
           </div>
         </section>
 
@@ -91,7 +90,7 @@ $conn->close();
           <div class="card mb-5 fadeInUp" style="border: none !important">
             <div class="card-body">
               <div class="row">
-                <h1 class="text-secondary text-center">Seja bem vindo de volta, <b><?= $_SESSION['nome'] ?></b></h1>
+                <h1 class="text-secondary text-center mb-3">Seja bem vindo de volta, <b><?= $_SESSION['nome'] ?></b></h1>
                 <hr>
                 <?php 
                   if(empty($data)) { ?>

@@ -43,10 +43,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Fazer Login</title>
-    <link
-      rel="stylesheet"
-      href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
@@ -72,7 +69,7 @@
         <section class="content-header bg-dark">
           <div class="container-fluid py-2 px-5 d-flex justify-content-between align-items-center">
             <div class="row text-center text-light">
-                <h1 style="font-family: 'Geologica';" class="fadeInDown mx-3">Bem vindo!</h1>
+                <h1 style="font-family: 'Geologica';" class="fadeInDown mx-3"><i class="fa-solid fa-square-pen"></i> CRUD Showcase</h1>
             </div>
             <form method="POST">
                 <div class="form-group d-flex gap-3 fadeInDown align-items-center">
@@ -86,7 +83,7 @@
           </div>
         </section>
         <section class="content bg-gradient bg-dark d-flex justify-content-center align-items-center">
-          <div class="container bg-light rounded-5 p-4 py-5 popIn">
+          <div class="container bg-light rounded-3 p-4 py-5 popIn">
             <h1 class="display-2 text-center"><b>Olá, usuário.</b></h1>
             <hr>
             <p class="display-6 my-5 text-secondary text-center">
@@ -95,7 +92,7 @@
             </p>
             <p class="text-secondary text-center" style="font-size: 2rem;">
               Não possui uma conta? 
-              <a href="../signIn/sign_in.php" class="bg-gradient bg-success rounded-2 text-light p-2 text-decoration-none">Clique aqui</a>
+              <a href="../signIn/sign_in.php" class="text-primary text-decoration-none">Clique aqui</a>
               para se cadastrar.</p> 
           </div>
         </section>
