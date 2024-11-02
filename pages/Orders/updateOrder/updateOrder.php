@@ -132,9 +132,7 @@ $connection->close();
                     </div>
                 </div>
             </div>
-            <!-- Background image -->
         </header>
-        <!--Main Navigation-->
     </div>
 </body>
 </html>
