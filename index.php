@@ -12,7 +12,7 @@
     $email = $connection->real_escape_string($_POST['email']);
     $senha = $connection->real_escape_string($_POST['senha']);
 
-    $sql_code = "SELECT * FROM `usuarios` WHERE `email` = '$email' and `senha` = '$senha';";
+    $sql_code = "SELECT * FROM `admins` WHERE `email` = '$email' and `senha` = '$senha';";
     $sql_query = $connection->query($sql_code) or die('Conexão SQL mal sucedida! ' . $connection->error);
 
     $query_quantidade = $sql_query->num_rows;
@@ -21,18 +21,18 @@
       echo "<script>alert('Falha no login! E-mail ou senha incorretos');</script>";
     }
     else{
-      $usuario = $sql_query->fetch_assoc();
+      $cliente = $sql_query->fetch_assoc();
 
       if(!isset($_SESSION)){
         session_start();
       }
 
-      $_SESSION['id'] = $usuario['id'];
-      $_SESSION['nome'] = $usuario['nome'];
+      $_SESSION['id'] = $cliente['id'];
+      $_SESSION['nome'] = $cliente['nome'];
 
       $connection->close();
 
-      header('Location: ./pages/CostumersList/costumersList.php');
+      header('Location: ./pages/homePage/homePage.php');
     }
   }
 ?>
