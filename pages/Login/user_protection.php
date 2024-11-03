@@ -3,5 +3,5 @@
         session_start();
     }
     if(!isset($_SESSION['id'])){
-        header('Location: ../Login/login_error_page.php');
+        header('Location: ../../Login/login_error_page.php');
     }
