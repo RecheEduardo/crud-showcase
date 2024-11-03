@@ -1,5 +1,5 @@
 <?php
-  include './pages/Login/db_conection.php';
+  include './pages/Login/conexaoDB.php';
 
   if(isset($_POST['email']) || isset($_POST['senha'])){
 
@@ -32,7 +32,7 @@
 
       $connection->close();
 
-      header('Location: ./pages/homePage/homePage.php');
+      header('Location: ./pages/PaginaInicial/inicio.php');
     }
   }
 ?>
@@ -92,7 +92,7 @@
             </p>
             <p class="text-secondary text-center" style="font-size: 2rem;">
               Não possui uma conta? 
-              <a href="./pages/signIn/sign_in.php" class="text-primary text-decoration-none">Clique aqui</a>
+              <a href="./pages/CriarConta/registrar.php" class="text-primary text-decoration-none">Clique aqui</a>
               para se cadastrar.</p> 
           </div>
         </section>
