@@ -155,9 +155,9 @@ $connection->close();
                                       <i class="fa-solid fa-pen text-light"></i>
                                     </button>
                                   </a>
-                                  <a href="../DeletarPedido/deletarPedido.php?pedido_id=<?= $pedido['pedido_id']?>" class="text-decoration-none">
+                                  <a href="../DeletarPedido/deletarPedido.php?pedido_id=<?= $pedido['pedido_id']?>" class="text-decoration-none delete-btn" data-id="<?= $pedido['pedido_id'] ?>">
                                     <button class="btn bg-gradient bg-danger">
-                                      <i class="fa-solid fa-trash text-light"></i>
+                                        <i class="fa-solid fa-trash text-light"></i>
                                     </button>
                                   </a>
                                 </td>
@@ -181,6 +181,44 @@ $connection->close();
         <i class="fa-solid fa-plus"></i> Adicionar pedido  
       </a>
     </div>
+
+    <!-- Modal de Confirmação -->
+    <div class="modal fade fadeInUp mt-5" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteModalLabel">Confirmar Exclusão</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            Tem certeza de que deseja excluir este pedido?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <a href="#" id="confirmDeleteBtn" class="btn btn-danger">Excluir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Incluindo o JavaScript do Bootstrap Bundle -->
+    <script src="../../../AdminLTE/plugins/bootstrapJS/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript para o Modal de Exclusão -->
+    <script>
+      document.querySelectorAll('.delete-btn').forEach(a => {
+        a.addEventListener('click', function(event) {
+          event.preventDefault();
+
+          const PedidoId = this.getAttribute('data-id');
+          const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+          confirmDeleteBtn.setAttribute('href', `../DeletarPedido/deletarPedido.php?pedido_id=${PedidoId}`);
+
+          const deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+          deleteModal.show();
+        });
+      });
+    </script>
   </body>
   <!-- adminLTE SCRIPTS - Ignore  -->
   <script src="../../../AdminLTE/plugins/jquery/jquery.min.js"></script>

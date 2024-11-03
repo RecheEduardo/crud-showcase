@@ -127,7 +127,7 @@ $connection->close();
                               <a href="../EditarProduto/editarProduto.php?produto_id=<?= $produtos['produto_id'] ?>" class="btn btn-sm btn-primary">
                                 <i class="fa-solid fa-pencil"></i> Editar  
                               </a>
-                              <a href="../DeletarProduto/deletarProduto.php?produto_id=<?= $produtos['produto_id'] ?>" class="btn btn-sm btn-danger">
+                              <a href="#" class="btn btn-sm btn-danger delete-btn" data-produto-id="<?= $produtos['produto_id'] ?>">
                                 <i class="fa-solid fa-trash"></i> Excluir  
                               </a>
                             </div>
@@ -147,5 +147,44 @@ $connection->close();
       <a href="../CriarProduto/criarProduto.php" class="btn btn-sm btn-success">
         <i class="fa-solid fa-plus"></i> Adicionar produto  
       </a>
-  </div>
+    </div>
+
+    <!-- Modal de Confirmação -->
+    <div class="modal fade mt-5 fadeInUp" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteModalLabel">Confirmar Exclusão</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            Tem certeza de que deseja excluir este produto?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <a href="#" id="confirmDeleteBtn" class="btn btn-danger">Excluir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../../AdminLTE/plugins/bootstrapJS/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript para o Modal -->
+    <script>
+      document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', function(event) {
+          event.preventDefault();
+
+          const produtoId = this.getAttribute('data-produto-id');
+          
+          const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+          confirmDeleteBtn.setAttribute('href', `../DeletarProduto/deletarProduto.php?produto_id=${produtoId}`);
+          
+          const deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+          deleteModal.show();
+        });
+      });
+    </script>
+  </body>
 </html>

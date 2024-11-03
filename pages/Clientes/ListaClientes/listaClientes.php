@@ -126,7 +126,7 @@ $connection->close();
                               <a href="../EditarCliente/editarCliente.php?id=<?= $pessoa['id'] ?>" class="btn btn-sm btn-primary">
                                 <i class="fa-solid fa-pencil"></i> Editar  
                               </a>
-                              <a href="../DeletarCliente/deletarCliente.php?id=<?= $pessoa['id'] ?>" class="btn btn-sm btn-danger">
+                              <a href="#" class="btn btn-sm btn-danger delete-btn" data-id="<?= $pessoa['id'] ?>">
                                 <i class="fa-solid fa-trash"></i> Excluir  
                               </a>
                             </div>
@@ -146,5 +146,43 @@ $connection->close();
       <a href="../CriarCliente/criarCliente.php" class="btn btn-sm btn-success">
         <i class="fa-solid fa-plus"></i> Adicionar cliente  
       </a>
-  </div>
+    </div>
+    <!-- Modal de Confirmação -->
+    <div class="modal fade fadeInUp mt-5" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteModalLabel">Confirmar Exclusão</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            Tem certeza de que deseja excluir este cliente?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <a href="#" id="confirmDeleteBtn" class="btn btn-danger">Excluir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Incluindo o JavaScript do Bootstrap Bundle -->
+    <script src="../../../AdminLTE/plugins/bootstrapJS/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript para o Modal de Exclusão -->
+    <script>
+      document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', function(event) {
+          event.preventDefault();
+
+          const clienteId = this.getAttribute('data-id');
+          const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+          confirmDeleteBtn.setAttribute('href', `../DeletarCliente/deletarCliente.php?id=${clienteId}`);
+
+          const deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+          deleteModal.show();
+        });
+      });
+    </script>
+  </body>  
 </html>
