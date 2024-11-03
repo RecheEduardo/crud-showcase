@@ -67,7 +67,7 @@ $connection->close();
                                     <hr>
                                     <div class="form-outline mb-4" data-mdb-input-init>
                                         <label class="form-label" for="produto_pedido">Produto</label>
-                                        <select class="form-select text-secondary" id="produto_pedido" name="pedidos[produto_pedido]" aria-label="Default select example">
+                                        <select class="form-select text-secondary" id="produto_pedido" name="pedidos[produto_pedido]" aria-label="Default select example" required>
                                             <option selected>Escolha o produto...</option>
                                             <?php 
                                                 if(empty($data_produto)) { ?>
@@ -84,7 +84,7 @@ $connection->close();
 
                                     <div class="form-outline mb-4" data-mdb-input-init>
                                         <label class="form-label" for="quantidade">Quantidade</label>
-                                        <input type="number" id="quantidade" name="pedidos[produto_quantidade]" class="form-control" placeholder="Digite a quantidade..." required/>
+                                        <input type="number" id="quantidade" name="pedidos[produto_quantidade]" class="form-control" min="1" placeholder="Digite a quantidade..." required/>
                                     </div>
 
                                     <div class="form-outline mb-4" data-mdb-input-init>
@@ -94,7 +94,7 @@ $connection->close();
 
                                     <div class="form-outline mb-4" data-mdb-input-init>
                                         <label class="form-label" for="usuario">Comprador</label>
-                                        <select class="form-select text-secondary" id="usuario" name="pedidos[usuario_pedido]" aria-label="Default select example">
+                                        <select class="form-select text-secondary" id="usuario" name="pedidos[usuario_pedido]" aria-label="Default select example" required>
                                             <option selected>Quem comprou?</option>
                                             <?php 
                                                 if(empty($data_cliente)) { ?>

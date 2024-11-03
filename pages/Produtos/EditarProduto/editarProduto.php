@@ -58,7 +58,7 @@ $connection->close();
 
                                     <div class="form-outline mb-4" data-mdb-input-init>
                                         <label class="form-label" for="preco">Preço do produto</label>
-                                        <input type="number" id="preco" name="produtos[produto_preco]" class="form-control" placeholder="Digite o preço..." value='<?= $produtos['produto_preco'] ?>'/>
+                                        <input type="number" id="preco" name="produtos[produto_preco]" class="form-control" placeholder="Digite o preço..." min="0" step="0.01" value='<?= $produtos['produto_preco'] ?>'/>
                                     </div>
 
                                     <div class="form-outline mb-4" data-mdb-input-init>

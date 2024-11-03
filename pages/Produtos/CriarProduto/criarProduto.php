@@ -36,7 +36,7 @@
 
                                     <div class="form-outline mb-4" data-mdb-input-init>
                                         <label class="form-label" for="preco">Preço</label>
-                                        <input type="number" id="preco" name="produtos[produto_preco]" class="form-control" placeholder="Digite o preço..." required/>
+                                        <input type="number" id="preco" name="produtos[produto_preco]" class="form-control" placeholder="Digite o preço..." min="0" step="0.01" required/>
                                     </div>
 
                                     <div class="form-outline mb-4" data-mdb-input-init>

@@ -69,7 +69,7 @@
         <section class="content-header bg-dark">
           <div class="container-fluid py-2 px-5 d-flex justify-content-between align-items-center">
             <div class="row text-center text-light">
-                <h1 style="font-family: 'Geologica';" class="fadeInDown mx-3"><i class="fa-solid fa-square-pen"></i> CRUD Showcase</h1>
+                <h1 style="font-family: 'Geologica';" class="fadeInDown mx-3"><i class="fa-solid fa-square-pen"></i> Sistema de loja</h1>
             </div>
             <form method="POST">
                 <div class="form-group d-flex gap-3 fadeInDown align-items-center">

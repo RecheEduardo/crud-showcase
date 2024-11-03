@@ -102,7 +102,7 @@ $connection->close();
                     foreach($data as $produtos) { ?>
                       <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column mb-5 popUp">
                         <div class="card bg-light d-flex flex-fill">
-                          <div class="card-header text-light border-bottom-0 bg-gradient bg-dark">
+                          <div class="card-header text-light border-bottom-0 bg-gradient bg-success">
                             Dados do produto <strong><?= $produtos['produto_id'] ?></strong>
                           </div>
                           <div class="card-body pt-0">
@@ -111,13 +111,20 @@ $connection->close();
                                 <h2 class="my-3 text-dark"><?= $produtos['produto_nome'] ?></h2>
                                 <p class="text-muted text-sm">
                                   <b></i> Descrição: </b> <?= $produtos['produto_descricao'] ?>
-                                </p>
-                                <hr>
+                                </p>    
+                                <hr>  
                                 <ul class="ml-4 mb-0 fa-ul text-muted">
                                   <li class="small">
                                     <span class="fa-li"><i class="fas fa-tag"></i></span>
-                                    Preço: <strong>R$ <?= $produtos['produto_preco'] ?></strong>
+                                    Preço: <strong>R$ <?= number_format($produtos['produto_preco'], 2, ',', '.'); ?></strong>
                                   </li>
+                                  <?php if ($produtos['updatedAt']) { ?>
+                                    <li class="small">
+                                      <span class="fa-li"><i class="fa-solid fa-calendar-days"></i></span>
+                                      Ultima edição em:  <b><?= $produtos['updatedAt'] ?></b>
+                                    </li> 
+                                  <?php } else { ?>
+                                  <?php } ?>
                                 </ul>
                               </div>
                             </div>
