@@ -184,12 +184,5 @@ $connection->close();
   </body>
   <!-- adminLTE SCRIPTS - Ignore  -->
   <script src="../../../AdminLTE/plugins/jquery/jquery.min.js"></script>
-  <script src="../../../AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../../../AdminLTE/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <script src="../../../AdminLTE/dist/js/adminlte.js?v=3.2.0"></script>
-  <script src="../../../AdminLTE/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
-  <script src="../../../AdminLTE/plugins/raphael/raphael.min.js"></script>
-  <script src="../../../AdminLTE/plugins/jquery-mapael/jquery.mapael.min.js"></script>
-  <script src="../../../AdminLTE/plugins/jquery-mapael/maps/usa_states.min.js"></script>
-  <script src="../../../AdminLTE/plugins/chart.js/Chart.min.js"></script>
 </html>
