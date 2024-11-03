@@ -112,10 +112,15 @@ $connection->close();
                                 <p class="text-muted text-sm">
                                   <b><i class="fas fa-envelope"></i> Email: </b> <?= $pessoa['email'] ?>
                                 </p>
+                                <hr>
                                 <ul class="ml-4 mb-0 fa-ul text-muted">
                                   <li class="small">
                                     <span class="fa-li"><i class="fas fa-user"></i></span>
                                     Idade: <strong><?= $pessoa['idade'] ?> anos</strong>
+                                  </li>
+                                  <li class="small">
+                                    <span class="fa-li"><i class="fa-solid fa-calendar-days"></i></span>
+                                    Usuário desde: <strong><?= $pessoa['created_at'] ?></strong>
                                   </li>
                                 </ul>
                               </div>

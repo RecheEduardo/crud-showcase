@@ -102,7 +102,7 @@ $connection->close();
                     foreach($data as $produtos) { ?>
                       <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column mb-5 popUp">
                         <div class="card bg-light d-flex flex-fill">
-                          <div class="card-header text-muted border-bottom-0">
+                          <div class="card-header text-light border-bottom-0 bg-gradient bg-dark">
                             Dados do produto <strong><?= $produtos['produto_id'] ?></strong>
                           </div>
                           <div class="card-body pt-0">

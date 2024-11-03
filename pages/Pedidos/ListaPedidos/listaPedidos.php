@@ -2,7 +2,21 @@
 
 include '../../Login/conexaoDB.php';
 
-$sql = 'SELECT * from pedidos';
+$sql = 'SELECT 
+            p.pedido_id,
+            p.data_pedido,
+            p.produto_pedido,
+            p.produto_quantidade,
+            p.endereco_pedido,
+            p.usuario_pedido,
+            c.nome AS nome_cliente,
+            pr.produto_nome AS nome_produto
+        FROM 
+            pedidos p
+        JOIN 
+            clientes c ON p.usuario_pedido = c.id
+        JOIN 
+            produtos pr ON p.produto_pedido = pr.produto_id';
 $result = $connection->query($sql);
 
 if ($connection->query($sql) === FALSE) {
@@ -120,10 +134,10 @@ $connection->close();
                             <thead>
                               <tr>
                                 <th>Código do pedido</th>
-                                <th>ID do Produto</th>
+                                <th>Nome do Produto</th>
                                 <th>Quantidade</th>
                                 <th>Data do pedido</th>
-                                <th>ID do Comprador</th>
+                                <th>Nome do Comprador</th>
                                 <th>Endereço do pedido</th>
                                 <th> </th>
                               </tr>
@@ -135,19 +149,19 @@ $connection->close();
                                   PE<?= sprintf('%05d', $pedido['pedido_id']) ?>
                                 </td>
                                 <td>
-                                  <?= $pedido['produto_pedido'] ?>
+                                  <?= $pedido['nome_produto'] ?>
                                 </td>
                                 <td>
-                                  <?= $pedido['produto_quantidade']?>
+                                  <?= $pedido['produto_quantidade'] ?>
                                 </td>
                                 <td>
-                                  <?= $pedido['data_pedido']?>
+                                  <?= $pedido['data_pedido'] ?>
                                 </td>
                                 <td>
-                                  <?= $pedido['usuario_pedido']?>
+                                  <?= $pedido['nome_cliente'] ?>
                                 </td>
                                 <td>
-                                  <?= $pedido['endereco_pedido']?>
+                                  <?= $pedido['endereco_pedido'] ?>
                                 </td>
                                 <td>
                                   <a href="../EditarPedido/editarPedido.php?pedido_id=<?= $pedido['pedido_id']?>" class="text-decoration-none">
@@ -162,7 +176,7 @@ $connection->close();
                                   </a>
                                 </td>
                               </tr>
-                            <?php } 
+                            <?php }
                           }
                         ?>
                         </tbody>

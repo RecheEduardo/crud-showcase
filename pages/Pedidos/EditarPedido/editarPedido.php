@@ -82,18 +82,19 @@ $connection->close();
                                         <select class="form-select text-secondary" id="produto_pedido" name="pedidos[produto_pedido]" aria-label="Default select example">
                                             <option selected>Escolha o produto...</option>
                                             <?php 
-                                                if(empty($data_produto)) { ?>
-                                                <?php 
-                                                }
-                                                else {
-                                                    foreach($data_produto as $produto) { ?>
-                                                    <option value="<?= $produto['produto_id']?>"><?= $produto['produto_nome'] ?></option>
-                                                    <?php }
+                                                if(empty($data_produto)) {
+                                                    // Caso não haja produtos
+                                                } else {
+                                                    foreach($data_produto as $produto) { 
+                                                        $selected = ($produto['produto_id'] == $pedido['produto_pedido']) ? 'selected' : ''; // Comparação para seleção
+                                                        ?>
+                                                        <option value="<?= $produto['produto_id']?>" <?= $selected ?>><?= $produto['produto_nome'] ?></option>
+                                                        <?php 
+                                                    }
                                                 }
                                             ?>
                                         </select>
                                     </div>
-
                                     <div class="form-outline mb-4" data-mdb-input-init>
                                         <label class="form-label" for="quantidade">Quantidade</label>
                                         <input type="number" id="quantidade" name="pedidos[produto_quantidade]" class="form-control" placeholder="Digite a quantidade..." required value="<?= $pedido['produto_quantidade']?>"/>
@@ -109,13 +110,15 @@ $connection->close();
                                         <select class="form-select text-secondary" id="usuario" name="pedidos[usuario_pedido]" aria-label="Default select example">
                                             <option selected>Quem comprou?</option>
                                             <?php 
-                                                if(empty($data_cliente)) { ?>
-                                                <?php 
-                                                }
-                                                else {
-                                                    foreach($data_cliente as $cliente) { ?>
-                                                    <option value="<?= $cliente['id']?>"><?= $cliente['nome'] ?></option>
-                                                    <?php }
+                                                if(empty($data_cliente)) {
+                                                    // Caso não haja clientes
+                                                } else {
+                                                    foreach($data_cliente as $cliente) { 
+                                                        $selected = ($cliente['id'] == $pedido['usuario_pedido']) ? 'selected' : ''; // Comparação para seleção
+                                                        ?>
+                                                        <option value="<?= $cliente['id']?>" <?= $selected ?>><?= $cliente['nome'] ?></option>
+                                                        <?php 
+                                                    }
                                                 }
                                             ?> 
                                         </select>
