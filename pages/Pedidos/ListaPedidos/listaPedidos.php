@@ -134,7 +134,7 @@ $connection->close();
                             <thead>
                               <tr>
                                 <th>Código do pedido</th>
-                                <th>Nome do Produto</th>
+                                <th>Nome do Perfume</th>
                                 <th>Quantidade</th>
                                 <th>Data do pedido</th>
                                 <th>Nome do Comprador</th>

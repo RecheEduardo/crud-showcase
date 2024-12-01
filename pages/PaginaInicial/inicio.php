@@ -90,7 +90,7 @@ $connection->close();
                   <a href="../Produtos/ListaProdutos/listaProdutos.php" class='text-light text-decoration-none d-flex gap-3 options-btn'>
                     <button class="btn bg-gradient bg-info p-5 w-100" style="white-space: nowrap;">
                         <p class="display-4 text-light mb-0">
-                        <i class="fa-solid fa-cart-shopping"></i> Produtos
+                        <i class="fa-solid fa-cart-shopping"></i> Perfumes
                         </p>
                     </button>
                   </a>

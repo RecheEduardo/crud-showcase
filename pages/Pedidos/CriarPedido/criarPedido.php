@@ -98,7 +98,7 @@ $connection->close();
                                             <option selected>Quem comprou?</option>
                                             <?php 
                                                 if(empty($data_cliente)) { ?>
-                                                <?php 
+                                                <?php
                                                 }
                                                 else {
                                                     foreach($data_cliente as $cliente) { ?>
