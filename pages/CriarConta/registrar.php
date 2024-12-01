@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Google_Forms_2020_Logo.svg/800px-Google_Forms_2020_Logo.svg.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../images/LOGO_PEQUENA.png" type="image/x-icon">
     <title>Criar conta</title>
     <link rel="stylesheet" href="../css/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="./registrar.css" rel="stylesheet">
   </head>
 
-  <body class="text-center bg-gradient bg-dark">
+  <body class="text-center bg-dark">
     <form class="form-signin bg-gradient bg-light px-5 py-4 rounded-2 fadeInUp" method="POST" action="./criarConta.php">
       <img class="mb-4" src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes-3/3/15-512.png" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal" style="font-size: 2.25rem;">Crie sua conta</h1>

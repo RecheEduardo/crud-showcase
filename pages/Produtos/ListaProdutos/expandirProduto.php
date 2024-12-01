@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="../../css/animations.css" />
     <link
       rel="shortcut icon"
-      href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Google_Forms_2020_Logo.svg/800px-Google_Forms_2020_Logo.svg.png"
+      href="../../../images/LOGO_PEQUENA.png"
       type="image/x-icon"
     />
     <style>

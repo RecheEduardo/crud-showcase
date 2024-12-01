@@ -23,7 +23,7 @@ $connection->close();
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/animations.css">
-    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Google_Forms_2020_Logo.svg/800px-Google_Forms_2020_Logo.svg.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../images/LOGO_PEQUENA.png" type="image/x-icon">
     <style>
       body{
         font-family: 'Sora' !important;
@@ -48,6 +48,8 @@ $connection->close();
       .footer-07 a{
         color: rgba(255,255,255,0.7) !important;
         text-decoration: none;
+      }.brand-image{
+        max-width: 60px;
       }
 
     </style>
@@ -59,8 +61,9 @@ $connection->close();
 
         <section class="content-header bg-dark fadeInDown">
           <div class="container-fluid py-2 px-5 d-flex justify-content-between align-items-center">
-            <div class="row text-center text-light">
-                <h1 style="font-family: 'Geologica'; font-size: 2.75rem;" class="popIn"><i class="fa-regular fa-square-plus"></i> Administrador</h1>
+            <div class="text-center text-light d-flex gap-4 popIn">
+                <img src="../../images/LOGO_PEQUENA.png" class="brand-image" alt="Site Logo">
+                <h1 style="font-family: 'Geologica'; font-size: 2.75rem;">Administrador</h1>
             </div>
             <div>
               <a href="../Login/desconectar.php" class="text-decoration-none">

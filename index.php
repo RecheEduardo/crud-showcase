@@ -49,7 +49,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./pages/css/animations.css">
-    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Google_Forms_2020_Logo.svg/800px-Google_Forms_2020_Logo.svg.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/LOGO_Pequena.png" type="image/x-icon">
     <style>
       body{
         font-family: 'Sora' !important;
@@ -59,6 +59,12 @@
       }
       .content-header{
         min-height: 8svh;
+      }.container h2{
+        font-size: 4rem;
+      }.brand-image{
+        max-width: 50px;
+      }.scale-medium{
+        transform: scale(0.8);
       }
     </style>
   </head>
@@ -68,8 +74,9 @@
       <div class="content-wrapper">
         <section class="content-header bg-dark">
           <div class="container-fluid py-2 px-5 d-flex justify-content-between align-items-center">
-            <div class="row text-center text-light">
-                <h1 style="font-family: 'Geologica';" class="fadeInDown mx-3"><i class="fa-solid fa-square-pen"></i> Sistema de loja</h1>
+            <div class="text-center text-light d-flex align-items-center gap-4">
+              <img src="./images/LOGO_Pequena.png" alt="Site Logo" class="brand-image">
+              <h1>Celeste Perfumes</h1>
             </div>
             <form method="POST">
                 <div class="form-group d-flex gap-3 fadeInDown align-items-center">
@@ -82,18 +89,26 @@
             </form>
           </div>
         </section>
-        <section class="content bg-gradient bg-dark d-flex justify-content-center align-items-center">
+        <section class="content bg-gradient bg-dark d-flex flex-column gap-5 justify-content-center align-items-center">
           <div class="container bg-light rounded-3 p-4 py-5 popIn">
             <h1 class="display-2 text-center"><b>Olá, usuário.</b></h1>
             <hr>
             <p class="display-6 my-5 text-secondary text-center">
               <i class="fa-solid fa-circle-exclamation"></i> 
-              Para ter acesso ao sistema, por favor, realize o login acima com seus dados cadastrais.
+              Para ter acesso ao sistema, por favor realize o login acima com seus dados cadastrais.
             </p>
             <p class="text-secondary text-center" style="font-size: 2rem;">
               Não possui uma conta? 
               <a href="./pages/CriarConta/registrar.php" class="text-primary text-decoration-none">Clique aqui</a>
               para se cadastrar.</p> 
+          </div>
+          <div class="container bg-gradient bg-secondary text-light rounded-3 p-3 opacity-75 scale-medium">
+            <h2 class="text-large text-center">Login para testes:</h2>
+            <hr>
+            <div class="d-flex flex-column">
+              <p class="display-6"><b>Email</b>: teste@email.com</p>
+              <p class="display-6"><b>Senha</b>: 1234</p>
+            </div>
           </div>
         </section>
       </div>
