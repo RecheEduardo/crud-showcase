@@ -1,7 +1,11 @@
-# 📋 Projeto CRUD Showcase
+<h1 align='center'>📋 Projeto CRUD Showcase</h1>
+
+---
 
 # 🌟 Descrição
 Este projeto é um exemplo completo de uma aplicação CRUD (Criar, Ler, Atualizar, Excluir) desenvolvida em **PHP** com integração ao banco de dados **MySQL** e um design moderno utilizando o template **AdminLTE**. Ele abrange funcionalidades de gerenciamento de clientes, pedidos e produtos, além de um sistema de autenticação para controle de acesso.
+
+---
 
 # 🛠️ Funcionalidades
 
@@ -59,6 +63,8 @@ Este projeto é um exemplo completo de uma aplicação CRUD (Criar, Ler, Atualiz
   - Arquivo: `criarConta.php`
   - Descrição: Permite o cadastro de novos usuários no sistema.
 
+---
+
 # 🚀 Instalação
 1. Clone o repositório:
    ```bash
@@ -76,6 +82,8 @@ Este projeto é um exemplo completo de uma aplicação CRUD (Criar, Ler, Atualiz
    php -S localhost:8000
    ```
 
+---
+
 # 📂 Estrutura do Projeto
 - `index.php`: Ponto de entrada da aplicação.
 - `pages/`: Contém os módulos principais:
@@ -86,24 +94,34 @@ Este projeto é um exemplo completo de uma aplicação CRUD (Criar, Ler, Atualiz
 - `AdminLTE/`: Template para interface do usuário.
 - `images/`: Recursos visuais, como logos.
 
+---
+
 # 🖼️ Capturas de Tela
 Foo
 
+---
+
 # 🤝 Contribuição
 1. Faça um fork do repositório.
+
 2. Crie um novo branch:
    ```bash
    git checkout -b minha-funcionalidade
    ```
+
 3. Commit suas alterações:
    ```bash
    git commit -m "Minha funcionalidade"
    ```
+
 4. Faça o push para o branch:
    ```bash
    git push origin minha-funcionalidade
    ```
-5. Abra um Pull Request.
+
+5. Pronto! Já pode abrir seu Pull Request.
+
+---
 
 # 📜 Licença
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](AdminLTE/LICENSE) para mais detalhes.
