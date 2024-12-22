@@ -29,6 +29,24 @@ Este projeto é um exemplo completo de uma aplicação CRUD (Criar, Ler, Atualiz
 
 ---
 
+# 🖼️ Visualização do projeto
+
+<img src='https://github.com/RecheEduardo/crud-showcase/blob/main/images/captura_1.png?raw=true' />
+
+---
+
+<img src='https://github.com/RecheEduardo/crud-showcase/blob/main/images/captura_2.png?raw=true' />
+
+---
+
+<img src='https://github.com/RecheEduardo/crud-showcase/blob/main/images/captura_3.png?raw=true' />
+
+---
+
+<img src='https://github.com/RecheEduardo/crud-showcase/blob/main/images/captura_4.png?raw=true' />
+
+---
+
 # 🛠️ Funcionalidades
 
 ## 👥 Gerenciamento de Clientes
@@ -118,11 +136,6 @@ Este projeto é um exemplo completo de uma aplicação CRUD (Criar, Ler, Atualiz
   - **Login**: Sistema de autenticação.
 - `AdminLTE/`: Template para interface do usuário.
 - `images/`: Recursos visuais, como logos.
-
----
-
-# 🖼️ Capturas de Tela
-Foo
 
 ---
 
