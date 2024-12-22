@@ -151,6 +151,7 @@ Foo
 # 📜 Licença
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](AdminLTE/LICENSE) para mais detalhes.
 
-## 🙌 Agradecimentos
-- [AdminLTE Template](https://adminlte.io/) pelo design de interface moderna.
+---
+
+### 🙌 É isso! Caso tenha gostado do repositório, não se esqueça de dar uma olhada no meu perfil ❤
 
