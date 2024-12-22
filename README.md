@@ -1,9 +1,31 @@
 <h1 align='center'>📋 Projeto CRUD Showcase</h1>
 
----
-
 # 🌟 Descrição
 Este projeto é um exemplo completo de uma aplicação CRUD (Criar, Ler, Atualizar, Excluir) desenvolvida em **PHP** com integração ao banco de dados **MySQL** e um design moderno utilizando o template **AdminLTE**. Ele abrange funcionalidades de gerenciamento de clientes, pedidos e produtos, além de um sistema de autenticação para controle de acesso.
+
+---
+
+# Tecnologias utilizadas
+
+<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" height="50"/> <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" height="50"/>
+<img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white" height="50"  />
+<img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white" height="50"  />
+<img src="https://img.shields.io/badge/AdminLTE-3361CC?style=for-the-badge&logo=supabase&logoColor=white" height="50"  />
+
+---
+
+# 📋 Requisitos
+
+### Para executar este projeto, você precisará ter na sua máquina:
+
+- **XAMPP**:
+  - Servidor Apache e MySQL habilitados.
+
+- **PHP**: Versão 7.4 ou superior.
+
+- **Navegador Web**: Para acessar a aplicação.
+
+- **phpMyAdmin**: Para gerenciar o banco de dados MySQL.
 
 ---
 
@@ -66,21 +88,24 @@ Este projeto é um exemplo completo de uma aplicação CRUD (Criar, Ler, Atualiz
 ---
 
 # 🚀 Instalação
+
 1. Clone o repositório:
    ```bash
    git clone <url-do-repositorio>
    ```
-2. Navegue até o diretório do projeto:
-   ```bash
-   cd crud-showcase-main
-   ```
+
+2. Copie a pasta do projeto para o diretório `htdocs` do XAMPP.
+
 3. Configure o banco de dados:
-   - Importe o arquivo `CRUD_SQL.sql` para o seu servidor MySQL.
-   - Atualize as credenciais do banco de dados no arquivo `conexaoDB.php`.
-4. Sirva os arquivos PHP usando um servidor local como XAMPP, WAMP ou o servidor embutido do PHP:
-   ```bash
-   php -S localhost:8000
-   ```
+   - Acesse o phpMyAdmin pelo navegador em: `http://localhost/phpmyadmin`.
+   - Importe o arquivo `CRUD_SQL.sql` disponível no projeto para o banco de dados criado e execute-o.
+
+4. Atualize as credenciais do banco de dados no arquivo `conexaoDB.php`, inserindo as informações corretas do seu ambiente.
+
+5. Inicie o servidor Apache e MySQL pelo painel de controle do XAMPP.
+
+6. Acesse a aplicação no navegador em: `http://localhost/<nome-da-pasta>`.
+
 
 ---
 
