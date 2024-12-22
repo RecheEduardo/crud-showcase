@@ -7,10 +7,10 @@ Este projeto é um exemplo completo de uma aplicação CRUD (Criar, Ler, Atualiz
 
 # Tecnologias utilizadas
 
-<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" height="50"/> <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" height="50"/>
-<img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white" height="50"  />
-<img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white" height="50"  />
-<img src="https://img.shields.io/badge/AdminLTE-3361CC?style=for-the-badge&logo=supabase&logoColor=white" height="50"  />
+<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" height="40"/> <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" height="40"/>
+<img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white" height="40"  />
+<img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white" height="40"  />
+<img src="https://img.shields.io/badge/AdminLTE-3361CC?style=for-the-badge&logo=supabase&logoColor=white" height="40"  />
 
 ---
 
