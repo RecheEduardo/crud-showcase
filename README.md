@@ -114,17 +114,16 @@ Este projeto é um exemplo completo de uma aplicação CRUD (Criar, Ler, Atualiz
    ```
 
 2. Copie a pasta do projeto para o diretório `htdocs` do XAMPP.
+   ```bash
+   C:\xampp\htdocs\"SUA PASTA DEVE ESTAR AQUI"
+   ```
+3. Certifique-se que o MySQL e o Apache estejam habilitados ao iniciar o XAMPP
 
-3. Configure o banco de dados:
+4. Configure o banco de dados:
    - Acesse o phpMyAdmin pelo navegador em: `http://localhost/phpmyadmin`.
    - Importe o arquivo `CRUD_SQL.sql` disponível no projeto para o banco de dados criado e execute-o.
 
-4. Atualize as credenciais do banco de dados no arquivo `conexaoDB.php`, inserindo as informações corretas do seu ambiente.
-
-5. Inicie o servidor Apache e MySQL pelo painel de controle do XAMPP.
-
-6. Acesse a aplicação no navegador em: `http://localhost/<nome-da-pasta>`.
-
+5. Acesse a aplicação no navegador em: `http://localhost/<nome-da-pasta>`.
 
 ---
 
