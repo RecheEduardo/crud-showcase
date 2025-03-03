@@ -161,10 +161,5 @@ Este projeto é um exemplo completo de uma aplicação CRUD (Criar, Ler, Atualiz
 
 ---
 
-# 📜 Licença
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](AdminLTE/LICENSE) para mais detalhes.
-
----
-
-### 🙌 É isso! Caso tenha gostado do repositório, não se esqueça de dar uma olhada no meu perfil ❤
+<h3 align="center">🙌 É isso! Caso tenha gostado do repositório, não se esqueça de dar uma olhada no meu perfil ❤</h3>
 
